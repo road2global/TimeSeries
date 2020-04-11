@@ -17,12 +17,6 @@ def ext_series(s):
         for i in range(1, N-s+2):
             ans += new_X[i+s-n-2][n-i]
         return ans / (N-s+1)
-
-def Draw(series, color, xlabel, ylabel):
-    plt.plot(series, color=color)
-    plt.xlabel(xlabel)
-    plt.ylabel(ylabel)
-    plt.show()
     
 data = pd.read_csv('toyota.csv', sep =';')
 data = data.drop(['<TIME>', '<HIGH>','<LOW>','<CLOSE>', '<VOL>'], axis=1)
