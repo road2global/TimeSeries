@@ -30,7 +30,7 @@ def one_iter_predict(method, n, X):
         ans = np.append(ans, pred)
         X_L = np.append(X_L, pred)
     return ans
-start_time = time() - 168*60*60
+start_time = time() - 180*60*60
 resource = requests.get("https://poloniex.com/public?command=returnChartData&currencyPair=BTC_ETH&start=%s&end=9999999999&period=1800" % start_time)
 data = loads(resource.text)
 
